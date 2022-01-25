@@ -4,21 +4,9 @@ using UnityEngine;
 
 public class CurrentStock : MonoBehaviour
 {
-    public int stock_id;
-    public string stockName;
-    public float price;
-    public List<int> stockValue;
+    public static int stock_id = 0;
+    public static string stockName = "»ï¼º";
+    public static int price = 50000;
+    public static List<int> stockValue = new List<int> { 10, 100, 1000, 10000, 100000 };
 
-    public void SetCurrentStock(int stock_id, string stockName, float price, List<int> stockValue)
-    {
-        this.stock_id = stock_id;
-        this.stockName = stockName;
-        this.price = price;
-        this.stockValue = stockValue;
-    }
-
-    private void Start()
-    {
-        SetCurrentStock(Stock_Samsung.stock_id,Stock_Samsung.stockName,Stock_Samsung.price,Stock_Samsung.stockValue);
-    }
 }
