@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GetCurrentStockPrice : MonoBehaviour
 {
 
-    public CurrentStock stock;
     void Start()
     {
         
@@ -14,6 +13,6 @@ public class GetCurrentStockPrice : MonoBehaviour
 
     void Update()
     {
-        GetComponent<Text>().text = "현재가격 : " + stock.price;
+        GetComponent<Text>().text = "현재가격 : " + CurrentStock.price;
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class HandleDropdown : MonoBehaviour
 {
     public Dropdown dropdown;
-    public CurrentStock stock;
     public void selectedDropdown()
     {
 
@@ -15,13 +14,22 @@ public class HandleDropdown : MonoBehaviour
         switch (dropdown.value)
         {
             case 0:
-                stock.SetCurrentStock(Stock_Samsung.stock_id,Stock_Samsung.stockName,Stock_Samsung.price,Stock_Samsung.stockValue);
+                CurrentStock.stock_id = 0;
+                CurrentStock.stockName = "삼성";
+                CurrentStock.price = 50000;
+                CurrentStock.stockValue = new List<int> { 10, 100, 1000, 10000, 100000 };
                 break;
             case 1:
-                stock.SetCurrentStock(Stock_Tesla.stock_id,Stock_Tesla.stockName, Stock_Tesla.price, Stock_Tesla.stockValue);
+                CurrentStock.stock_id = 1;
+                CurrentStock.stockName = "테슬라";
+                CurrentStock.price = 1400;
+                CurrentStock.stockValue = new List<int> { 1245, 1100, 1020, 1210, 1350 };
                 break;
             case 2:
-                stock.SetCurrentStock(Stock_Google.stock_id,Stock_Google.stockName, Stock_Google.price, Stock_Google.stockValue);
+                CurrentStock.stock_id = 2;
+                CurrentStock.stockName = "구글";
+                CurrentStock.price = 3000;
+                CurrentStock.stockValue = new List<int> { 2780, 2850, 2900, 2860, 2920 };
                 break;
         }
     }

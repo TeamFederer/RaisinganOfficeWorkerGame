@@ -10,7 +10,6 @@ public class StockGraph : MonoBehaviour
     
     List<int> Stock = new List<int> { 10, 100, 1000, 10000, 100000 };
 
-    public CurrentStock stock;
     public int prevStockId;
 
     public int SAMPLE_RATE = 10;
@@ -35,10 +34,10 @@ public class StockGraph : MonoBehaviour
 
     void Start()
     {
-        prevStockId = stock.stock_id;
-        if(stock.stockValue.Count != 0)
+        prevStockId = CurrentStock.stock_id;
+        if(CurrentStock.stockValue.Count != 0)
         {
-            Stock = stock.stockValue;
+            Stock = CurrentStock.stockValue;
         }
 
         labelTemplateX = labelTemplateGroup.Find("labelTemplateX").GetComponent<RectTransform>();
@@ -187,7 +186,7 @@ public class StockGraph : MonoBehaviour
 
     private void Update()
     {
-        if(prevStockId != stock.stock_id)
+        if(prevStockId != CurrentStock.stock_id)
         {
             Debug.Log("stock change");
             RemoveGraph();
