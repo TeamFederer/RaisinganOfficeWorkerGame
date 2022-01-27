@@ -8,18 +8,25 @@ public class MoveScene : MonoBehaviour
 {
     public void MoveMainScene()
     {
-        Debug.Log("click");
+        Debug.Log("main click");
         SceneManager.LoadScene("SampleScene");
     }
 
     public void MoveSpecUpScene()
     {
-        Debug.Log("click");
+        Debug.Log("spec up click");
         SceneManager.LoadScene("SpecUpScene");
     }
 
     public void MoveStockScene()
     {
+        Debug.Log("stock click");
         SceneManager.LoadScene("StockScene");
+    }
+
+    public void MoveCompanyScene()
+    {
+        Debug.Log("company click");
+        SceneManager.LoadScene("CompanyScene");
     }
 }
