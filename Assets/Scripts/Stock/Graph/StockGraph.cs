@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StockGraph : MonoBehaviour
 {
     Dictionary<int, int> StockValue = new Dictionary<int, int> { };
-    
+
     List<int> Stock = new List<int> { 10, 100, 1000, 10000, 100000 };
 
     public int prevStockId;
@@ -30,9 +30,9 @@ public class StockGraph : MonoBehaviour
 
     private float graph_Width;
     private float graph_Height;
-    private int StockAverage;
+    //private int StockAverage;
 
-    void Start()
+    /*void Start()
     {
         prevStockId = CurrentStock.stock_id;
         if(CurrentStock.stockValue.Count != 0)
@@ -194,4 +194,7 @@ public class StockGraph : MonoBehaviour
             
         }
     }
+}
+    */
+
 }
